@@ -8,16 +8,28 @@
 
 Стек технологий Python 3.9 Django 3.2 Django REST Framework 3.12.4 Django REST Framework simplejwt 5.1.0
 
-Как запустить проект 1.Клонируем репозиторий на локальную машину: https://github.com/Mikita2410/infra_sp2 git clone https://@github.com:Mikita2410/infra_sp2.git 2.Создать .env файл внутри директории infra (на одном уровне с docker-compose.yaml) Пример .env файла: SECRET_KEY = 'p&l%385148kslhtyn^##a1)ilz@4zqj=rq&agdol^##zgl9(vs' DB_ENGINE=django.db.backends.postgresql DB_NAME=postgres POSTGRES_USER=postgres POSTGRES_PASSWORD=postgres DB_HOST=db DB_PORT=5432
-
-Запуск тестов (опционально, если не нужно - переходите к следующему шагу) Создаем и активируем виртуальное окружение: Для Mac или Linux
-cd infra_sp2 python3 -m venv venv source venv/bin/activate cd api_yamdb pip install -r requirements.txt cd .. pytest Для Windows
-
-cd infra_sp2 python -m venv venv source venv/Scripts/activate cd api_yamdb pip install -r requirements.txt cd .. pytest 4.Запуск Docker контейнеров: Запустите docker-compose cd infra/ docker-compose up -d --build 5.Cоздайте суперпользователя: docker-compose exec web python manage.py createsuperuser 6.Следующими шагами загрузить дамп (резервную копию) базы: cd api_yamdb && python manage.py loaddata ../infra/fixtures.json 7.Проверьте доступность сервиса http://localhost/admin Документация http://localhost/redoc/ Права доступа: Доступно без токена. GET /api/v1/categories/ - Получение списка всех категорий GET /api/v1/genres/ - Получение списка всех жанров GET /api/v1/titles/ - Получение списка всех произведений GET /api/v1/titles/{title_id}/reviews/ - Получение списка всех отзывов GET /api/v1/titles/{title_id}/reviews/{review_id}/comments/ - Получение списка всех комментариев к отзыву Права доступа: Администратор GET /api/v1/users/ - Получение списка всех пользователей
+ Запуск Docker контейнеров: Запустите docker-compose cd infra/ docker-compose up -d --build 
+ Cоздайте суперпользователя: docker-compose exec web python manage.py createsuperuser 
+ Следующими шагами загрузить дамп (резервную копию) базы: cd api_yamdb && python manage.py loaddata ../infra/fixtures.json 
+ Проверьте доступность сервиса http://localhost/admin 
+ Документация http://localhost/redoc/ 
+ Права доступа: Доступно без токена. GET /api/v1/categories/ - Получение списка всех категорий 
+ GET /api/v1/genres/ - Получение списка всех жанров 
+ GET /api/v1/titles/ - Получение списка всех произведений 
+ GET /api/v1/titles/{title_id}/reviews/ - Получение списка всех отзывов 
+ GET /api/v1/titles/{title_id}/reviews/{review_id}/comments/ - Получение списка всех комментариев к отзыву 
+ Права доступа: Администратор GET /api/v1/users/ - Получение списка всех пользователей 
 
 Получение JWT-токена: POST /api/v1/auth/token/
 
 { "username": "string", "confirmation_code": "string" }
+
+## Ссылки на проект:
+* http://51.250.29.80/api/v1/titles/
+* http://51.250.29.80/api/v1/categories/
+* http://51.250.29.80/api/v1/genres/
+* http://51.250.29.80/redoc/
+* http://51.250.29.80/admin/
 
 ## Статус workflow
 [![workflow](https://github.com/Mikita2410/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg?branch=master)](https://github.com/Mikita2410/yamdb_final/actions/workflows/yamdb_workflow.yml)
