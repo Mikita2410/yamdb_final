@@ -60,7 +60,7 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           passphrase: ${{ secrets.PASSPHRASE }}
           script: |
-            sudo docker pull anxeity/yamdb
+            sudo docker pull ${{ secrets.DOCKER_USERNAME }}/gates
             sudo docker-compose stop
             sudo docker-compose rm web
             touch .env
