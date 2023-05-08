@@ -46,7 +46,7 @@ jobs:
             context: ./api_yamdb
             file: ./api_yamdb/Dockerfile
             push: true
-            tags: anxeity/yamdb
+            tags: ${{ secrets.DOCKER_USERNAME }}/gates
 
   deploy:
     runs-on: ubuntu-latest
