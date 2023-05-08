@@ -59,9 +59,9 @@ jobs:
           username: ${{ secrets.USER }}
           key: ${{ secrets.SSH_KEY }}
           script: |
-            sudo docker pull mikita2410/gates
             sudo docker-compose stop
             sudo docker-compose rm web
+            sudo docker pull mikita2410/gates
             touch .env
             echo DB_ENGINE=${{ secrets.DB_ENGINE }} >> .env
             echo DB_NAME=${{ secrets.DB_NAME }} >> .env
@@ -69,7 +69,7 @@ jobs:
             echo POSTGRES_PASSWORD=${{ secrets.POSTGRES_PASSWORD }} >> .env
             echo DB_HOST=${{ secrets.DB_HOST }} >> .env
             echo DB_PORT=${{ secrets.DB_PORT }} >> .env
-            sudo docker-compose up -d 
+            sudo docker-compose up -d --build 
   send_message:
     runs-on: ubuntu-latest
     needs: deploy
