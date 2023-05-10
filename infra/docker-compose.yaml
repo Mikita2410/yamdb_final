@@ -8,7 +8,7 @@ services:
     env_file:
       - ./.env
   web:
-    image: anxeity/yamdb:latest
+    image: mikita2410/gates
     restart: always
     volumes:
       - static_value:/app/static/
