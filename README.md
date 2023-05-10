@@ -36,7 +36,7 @@ GET /api/v1/titles/{title_id}/reviews/{review_id}/comments/ - Получение
 { "username": "string", "confirmation_code": "string" }
 
 ## Ссылки на проект:
-* http://158.160.62.85/admin/
+* http://51.250.65.157/admin/
 
 ## Статус workflow
 [![workflow](https://github.com/Mikita2410/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg?branch=master)](https://github.com/Mikita2410/yamdb_final/actions/workflows/yamdb_workflow.yml)
