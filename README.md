@@ -36,11 +36,11 @@ GET /api/v1/titles/{title_id}/reviews/{review_id}/comments/ - Получение
 { "username": "string", "confirmation_code": "string" }
 
 ## Ссылки на проект:
-* http://51.250.29.80/api/v1/titles/
-* http://51.250.29.80/api/v1/categories/
-* http://51.250.29.80/api/v1/genres/
-* http://51.250.29.80/redoc/
-* http://51.250.29.80/admin/
+* http://158.160.62.85/api/v1/titles/
+* http://158.160.62.85/api/v1/categories/
+* http://158.160.62.85/api/v1/genres/
+* http://158.160.62.85/redoc/
+* http://158.160.62.85/admin/
 
 ## Статус workflow
 [![workflow](https://github.com/Mikita2410/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg?branch=master)](https://github.com/Mikita2410/yamdb_final/actions/workflows/yamdb_workflow.yml)
