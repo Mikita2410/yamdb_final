@@ -36,10 +36,6 @@ GET /api/v1/titles/{title_id}/reviews/{review_id}/comments/ - Получение
 { "username": "string", "confirmation_code": "string" }
 
 ## Ссылки на проект:
-* http://158.160.62.85/api/v1/titles/
-* http://158.160.62.85/api/v1/categories/
-* http://158.160.62.85/api/v1/genres/
-* http://158.160.62.85/redoc/
 * http://158.160.62.85/admin/
 
 ## Статус workflow
